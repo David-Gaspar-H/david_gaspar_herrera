@@ -169,12 +169,12 @@ main {
     width: 100px;
     height: 100px;
     animation: float 6s ease-in-out infinite;
-    z-index: 1;
+    z-index: 0;
 }
 
 .sticker-1 {
     top: 20%;
-    right: 40%;
+    right: 30%;
     animation-delay: 0s;
 }
 
