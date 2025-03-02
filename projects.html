@@ -3,184 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - David Gaspar-Herrera</title>
+    <title>David Gaspar-Herrera | Engineering Projects</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Custom '90s font -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/project_styles.css">
 </head>
-<body>
-    <div class="background-characters">
-        <!-- Characters will be added via JS -->
-        <div class="character character-1"></div>
-        <div class="character character-2"></div>
-    </div>
-
-    <div class="noise-overlay"></div>
-
-    <header>
-        <div class="logo-container">
-            <div class="logo">David Gaspar-Herrera</div>
+<body class="blueprint-background">
+    <div class="cursor"></div>
+    
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+    
+    <main class="projects-container">
+        <div class="projects-header">
+            <h1>Engineering Projects</h1>
+            <p class="projects-intro">A collection of my technical projects showcasing problem-solving and creative applications across various domains. Click on any card to reveal more details.</p>
         </div>
-        <nav>
-            <div class="nav-item"><a href="index.html">Home</a></div>
-            <div class="nav-item"><a href="blog.html">Blog</a></div>
-            <div class="nav-item"><a href="about.html">About</a></div>
-            <div class="nav-item"><a href="art.html">Art & Animation</a></div>
-            <div class="nav-item"><a href="projects.html">Projects</a></div>
-            <div class="nav-item"><a href="cv.html">CV</a></div>
-        </nav>
-    </header>
-
-    <main class="content">
-        <section class="intro">
-            <h1 class="glitch-text">Engineering Projects</h1>
-            <p>A showcase of my technical work and experiments</p>
-            <div class="decorative-line"></div>
-        </section>
-
-        <section class="project-filters">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="app">App Development</button>
-                <button class="filter-btn" data-filter="game">Game Dev</button>
-                <button class="filter-btn" data-filter="other">Other</button>
-            </div>
-        </section>
-
-        <section class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card" data-category="web">
-                <div class="project-img"></div>
-                <div class="project-details">
-                    <h2>Personal Website</h2>
-                    <p class="project-tags">HTML, CSS, JavaScript</p>
-                    <p class="project-description">A '90s-inspired personal website built with vanilla HTML, CSS, and JavaScript. Features include custom animations, a markdown blog system, and responsive design.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card" data-category="app">
-                <div class="project-img"></div>
-                <div class="project-details">
-                    <h2>Task Manager App</h2>
-                    <p class="project-tags">React, Node.js, MongoDB</p>
-                    <p class="project-description">A full-stack task management application with user authentication, task categories, due dates, and notifications. Built with the MERN stack.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card" data-category="game">
-                <div class="project-img"></div>
-                <div class="project-details">
-                    <h2>Retro Platformer Game</h2>
-                    <p class="project-tags">Phaser.js, JavaScript</p>
-                    <p class="project-description">A browser-based platformer game inspired by classic 16-bit era games. Features pixel art graphics, custom physics, and multiple levels.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Play Game</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card" data-category="other">
-                <div class="project-img"></div>
-                <div class="project-details">
-                    <h2>Weather Data Visualization</h2>
-                    <p class="project-tags">D3.js, JavaScript, APIs</p>
-                    <p class="project-description">An interactive visualization of historical weather data using D3.js. Users can explore temperature trends, precipitation patterns, and seasonal changes.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card" data-category="web">
-                <div class="project-img"></div>
-                <div class="project-details">
-                    <h2>E-commerce Store Template</h2>
-                    <p class="project-tags">React, Redux, Firebase</p>
-                    <p class="project-description">A responsive e-commerce store template with product filtering, cart functionality, and user accounts. Built with React and Firebase.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-card" data-category="app">
-                <div class="project-img"></div>
-                <div class="project-details">
-                    <h2>Recipe Finder App</h2>
-                    <p class="project-tags">React Native, API Integration</p>
-                    <p class="project-description">A mobile app that helps users find recipes based on ingredients they have. Features include saving favorites, meal planning, and shopping lists.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Case Study</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="#" class="social-icon">GitHub</a>
-                <a href="#" class="social-icon">LinkedIn</a>
-                <a href="#" class="social-icon">Instagram</a>
-            </div>
-            <p>&copy; 2025 David Gaspar-Herrera. Made with HTML, CSS & JS.</p>
+        
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
         </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script>
-        // Project filtering
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
+        
+        <div class="projects-grid">
+            <!-- Project 1: Natural Language Opinion Search Engine -->
+            <div class="project-card" data-category="ml">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-header">
+                            <h3 class="card-title">Natural Language Opinion Search Engine</h3>
+                            <span class="card-date">Aug 2024 - Present</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="assets/images/projects/nlp-search.png" alt="NLP Search Engine" >
+                        </div>
+                        <div class="card-brief">
+                            <p>Advanced search engine to retrieve relevant product reviews from Amazon datasets based on aspect-opinion queries.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <div class="flip-instruction">Click to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-header">
+                            <h3>Natural Language Opinion Search Engine</h3>
+                            <div class="back-links">
+                                <a href="https://github.com/David-Gaspar-H/nlp-search" target="_blank" class="card-link">GitHub</a>
+                                <a href="#" target="_blank" class="card-link">Demo</a>
+                            </div>
+                        </div>
+                        <div class="back-content">
+                            <h4>Project Overview</h4>
+                            <p>Developed an advanced search engine to retrieve relevant product reviews from a large Amazon dataset based on aspect-opinion queries.</p>
+                            
+                            <h4>Technical Implementation</h4>
+                            <ul>
+                                <li>Implemented multiple NLP techniques including Boolean retrieval, sentiment analysis, and machine learning classifiers</li>
+                                <li>Used SVM and Naive Bayes algorithms to improve search relevance</li>
+                                <li>Created a vector-based ranking system to prioritize the most relevant reviews</li>
+                                <li>Integrated a custom UI for intuitive query processing</li>
+                            </ul>
+                            
+                            <h4>Technologies Used</h4>
+                            <p>Python, NLTK, scikit-learn, pandas, NumPy, Flask</p>
+                        </div>
+                        <div class="flip-instruction">Click to flip back</div>
+                    </div>
+                </div>
+            </div>
             
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    button.classList.add('active');
-                    
-                    const filter = button.getAttribute('data-filter');
-                    
-                    // Show all items if "All" is selected
-                    if (filter === 'all') {
-                        projectCards.forEach(card => {
-                            card.style.display = 'grid';
-                        });
-                    } else {
-                        // Otherwise, filter items based on category
-                        projectCards.forEach(card => {
-                            if (card.getAttribute('data-category') === filter) {
-                                card.style.display = 'grid';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+            <!-- Project 2: Pixl-Sketch -->
+            <div class="project-card" data-category="web">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-header">
+                            <h3 class="card-title">Pixl-Sketch</h3>
+                            <span class="card-date">July 2022 - Sep 2022</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="assets/images/projects/pixl-sketch.png" alt="Pixl-Sketch" >
+                        </div>
+                        <div class="card-brief">
+                            <p>Collaborative art platform enabling artists to create and collaborate on art projects in real-time.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="flip-instruction">Click to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-header">
+                            <h3>Pixl-Sketch</h3>
+                            <div class="back-links">
+                                <a href="https://github.com/David-Gaspar-H/pixl-sketch" target="_blank" class="card-link">GitHub</a>
+                                <a href="#" target="_blank" class="card-link">Live Site</a>
+                            </div>
+                        </div>
+                        <div class="back-content">
+                            <h4>Project Overview</h4>
+                            <p>Collaborative art platform that enables artists to create and collaborate on projects in real-time with intuitive drawing tools.</p>
+                            
+                            <h4>Technical Implementation</h4>
+                            <ul>
+                                <li>Built a responsive React frontend with a custom canvas component</li>
+                                <li>Implemented real-time collaboration using Socket.io</li>
+                                <li>Created a user authentication system with JWT</li>
+                                <li>Set up a MongoDB database to store project data and user information</li>
+                                <li>Developed a Node.js backend with RESTful API endpoints</li>
+                            </ul>
+                            
+                            <h4>Technologies Used</h4>
+                            <p>React, Node.js, Socket.io, MongoDB, Express, JWT</p>
+                        </div>
+                        <div class="flip-instruction">Click to flip back</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3: Server Management Tool -->
+            <div class="project-card" data-category="backend">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-header">
+                            <h3 class="card-title">Server Management Tool</h3>
+                            <span class="card-date">June 2024 - Present</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="assets/images/projects/server-management.png" alt="Server Management Tool">
+                        </div>
+                        <div class="card-brief">
+                            <p>Full-stack application for monitoring and protecting lab infrastructure with automated shutdown capabilities.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="flip-instruction">Click to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-header">
+                            <h3>Server Management Tool</h3>
+                            <div class="back-links">
+                                <a href="#" target="_blank" class="card-link">Documentation</a>
+                            </div>
+                        </div>
+                        <div class="back-content">
+                            <h4>Project Overview</h4>
+                            <p>Server management tool designed to monitor and protect lab infrastructure with automatic shutdown capabilities.</p>
+                            
+                            <h4>Technical Implementation</h4>
+                            <ul>
+                                <li>Developed a modular architecture with Docker containers for scalability</li>
+                                <li>Created separate services for monitoring, shutdown, and data management</li>
+                                <li>Implemented event-driven automation to trigger shutdowns when environmental thresholds are reached</li>
+                                <li>Built a responsive React frontend dashboard for real-time monitoring</li>
+                                <li>Documented the system architecture and implementation in Confluence</li>
+                            </ul>
+                            
+                            <h4>Technologies Used</h4>
+                            <p>Flask, React, Docker, CI/CD, Confluence</p>
+                        </div>
+                        <div class="flip-instruction">Click to flip back</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4: Automated Testing Framework -->
+            <div class="project-card" data-category="backend">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-header">
+                            <h3 class="card-title">Automated Testing Framework</h3>
+                            <span class="card-date">May 2023 - Dec 2023</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="assets/images/projects/testing-framework.png" alt="Automated Testing Framework">
+                        </div>
+                        <div class="card-brief">
+                            <p>End-to-End testing automation system with machine learning-based log analysis for improved troubleshooting.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">ML</span>
+                        </div>
+                        <div class="flip-instruction">Click to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-header">
+                            <h3>Automated Testing Framework</h3>
+                            <div class="back-links">
+                                <a href="#" target="_blank" class="card-link">Documentation</a>
+                            </div>
+                        </div>
+                        <div class="back-content">
+                            <h4>Project Overview</h4>
+                            <p>Comprehensive automated testing framework for server management platforms with intelligent log analysis.</p>
+                            
+                            <h4>Technical Implementation</h4>
+                            <ul>
+                                <li>Developed automated End-to-End tests using Playwright and Python</li>
+                                <li>Created a log analysis system using machine learning to classify error patterns</li>
+                                <li>Integrated the testing framework into existing CI/CD pipelines</li>
+                                <li>Implemented automated reporting and notification systems</li>
+                                <li>Reduced troubleshooting time by 60% through intelligent log analysis</li>
+                            </ul>
+                            
+                            <h4>Technologies Used</h4>
+                            <p>Python, Playwright, CI/CD, Jira, Machine Learning</p>
+                        </div>
+                        <div class="flip-instruction">Click to flip back</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sticker project-sticker-1"><img src="assets/images/sticker7.png" alt="Decorative sticker"></div>
+        <div class="sticker project-sticker-2"><img src="assets/images/sticker8.png" alt="Decorative sticker"></div>
+    </main>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <!-- Load components first, then other scripts -->
+    <script src="js/templates.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/project_script.js"></script>
 </body>
 </html>

@@ -1,0 +1,382 @@
+/* Projects Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Blueprint Background */
+.blueprint-background {
+    background-color: #102a43;
+    background-image: 
+        linear-gradient(rgba(52, 152, 219, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(52, 152, 219, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(52, 152, 219, 0.1) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(52, 152, 219, 0.1) 2px, transparent 2px);
+    background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.projects-header {
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--main-bg);
+}
+
+.projects-header h1 {
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+.projects-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--main-bg);
+}
+
+/* Project Filters */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--accent2);
+    color: var(--main-bg);
+    padding: 8px 15px;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--accent2);
+    color: white;
+}
+
+.filter-btn.active {
+    position: relative;
+}
+
+.filter-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent2);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Project Card Styles */
+.project-card {
+    perspective: 1000px;
+    height: 500px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.project-card:hover .card-inner {
+    transform: scale(1.02);
+}
+
+.project-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+    background: white;
+    color: var(--text-color);
+    border: 5px solid var(--accent2);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-back {
+    background: white;
+    color: var(--text-color);
+    transform: rotateY(180deg);
+    border: 5px solid var(--accent1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Card Front Elements */
+.card-header {
+    background: var(--accent2);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card-brief {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.card-brief p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.card-tags {
+    padding: 0 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--accent2);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid var(--accent2);
+}
+
+.flip-instruction {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-style: italic;
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--accent2);
+    border-top: 1px dashed var(--accent2);
+}
+
+/* Card Back Elements */
+.back-header {
+    margin-bottom: 20px;
+    border-bottom: 2px dashed var(--accent1);
+    padding-bottom: 15px;
+}
+
+.back-header h3 {
+    font-family: 'VT323', monospace;
+    font-size: 1.6rem;
+    margin: 0 0 10px 0;
+    color: var(--accent1);
+}
+
+.back-links {
+    display: flex;
+    gap: 15px;
+}
+
+.card-link {
+    background: var(--accent1);
+    color: white;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.card-link:hover {
+    background: var(--accent3);
+    transform: translateY(-2px);
+}
+
+.back-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.back-content h4 {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    margin: 15px 0 10px 0;
+    color: var(--accent2);
+}
+
+.back-content p {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.back-content ul {
+    margin: 0 0 15px 0;
+    padding-left: 20px;
+}
+
+.back-content li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.card-back .flip-instruction {
+    border-top: 1px dashed var(--accent1);
+    color: var(--accent1);
+    background: rgba(231, 76, 60, 0.1);
+    margin-top: 20px;
+}
+
+/* Custom Scrollbar */
+.back-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.back-content::-webkit-scrollbar-track {
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 10px;
+}
+
+.back-content::-webkit-scrollbar-thumb {
+    background: var(--accent2);
+    border-radius: 10px;
+}
+
+/* Project Stickers */
+.project-sticker-1 {
+    top: 10%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+.project-sticker-2 {
+    bottom: 15%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+/* Card Flip Animation */
+@keyframes flipIn {
+    from {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.project-card {
+    animation: flipIn 0.5s ease-out;
+}
+
+/* Blueprint Elements */
+.blueprint-line {
+    position: absolute;
+    background-color: rgba(52, 152, 219, 0.2);
+}
+
+.blueprint-line.horizontal {
+    height: 1px;
+    width: 100%;
+}
+
+.blueprint-line.vertical {
+    width: 1px;
+    height: 100%;
+}
+
+.blueprint-circle {
+    position: absolute;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    
+    .project-card {
+        height: 450px;
+    }
+    
+    .card-image {
+        height: 160px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
