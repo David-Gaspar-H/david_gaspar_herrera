@@ -1,0 +1,271 @@
+/* CV Page Styles */
+
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.cv-header {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.cv-name {
+    font-family: 'VT323', monospace;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--accent1);
+}
+
+.cv-contact-info {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.cv-contact-info a {
+    color: var(--accent2);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cv-contact-info a:hover {
+    text-decoration: underline;
+    color: var(--accent3);
+}
+
+.cv-section {
+    margin-bottom: 50px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cv-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent1), var(--accent2));
+    border-radius: 5px 0 0 5px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-institution {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.education-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.education-degree {
+    font-style: italic;
+}
+
+.education-date {
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    color: var(--accent1);
+}
+
+.experience-item, .project-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.experience-item:last-child, .project-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.experience-header, .project-header {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job-title, .project-title {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
+.job-company {
+    font-weight: bold;
+    font-style: italic;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.job-date, .project-date {
+    font-family: 'VT323', monospace;
+    color: var(--accent3);
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+.experience-details, .project-details {
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+.experience-details li, .project-details li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.experience-details li strong, .project-details li strong {
+    color: var(--accent2);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.skill-category h3 {
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.skill-category h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: var(--accent2);
+}
+
+.skill-list-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--accent2);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border: 1px solid var(--accent2);
+}
+
+.skill-tag:hover {
+    background: var(--accent2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cv-download {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* CV page specific stickers */
+.cv-sticker-1 {
+    top: 15%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+.cv-sticker-2 {
+    bottom: 20%;
+    left: 3%;
+    animation-delay: 2.5s;
+}
+
+/* Print styles */
+@media print {
+    header, footer, .sticker, .cursor, .cv-download {
+        display: none !important;
+    }
+    
+    body, .cv-container {
+        background: white !important;
+        color: black !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .cv-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: white !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .cv-section::before {
+        display: none !important;
+    }
+    
+    a {
+        text-decoration: none !important;
+        color: black !important;
+    }
+    
+    h1, h2, .section-title, .job-title, .project-title, .cv-name {
+        color: black !important;
+    }
+    
+    .section-title::after {
+        background: black !important;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .experience-header, .project-header {
+        flex-direction: column;
+    }
+    
+    .job-date, .project-date, .job-company {
+        margin-top: 5px;
+    }
+    
+    .cv-section {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}

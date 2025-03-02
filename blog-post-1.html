@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title - David Gaspar-Herrera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Custom '90s font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-characters">
+        <!-- Characters will be added via JS -->
+        <div class="character character-1"></div>
+        <div class="character character-2"></div>
+    </div>
+
+    <div class="noise-overlay"></div>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo">David Gaspar-Herrera</div>
+        </div>
+        <nav>
+            <div class="nav-item"><a href="index.html">Home</a></div>
+            <div class="nav-item"><a href="blog.html">Blog</a></div>
+            <div class="nav-item"><a href="about.html">About</a></div>
+            <div class="nav-item"><a href="art.html">Art & Animation</a></div>
+            <div class="nav-item"><a href="projects.html">Projects</a></div>
+            <div class="nav-item"><a href="cv.html">CV</a></div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="blog-header">
+            <h1 class="glitch-text">Getting Back into Web Development</h1>
+            <div class="blog-meta">
+                <span class="blog-date">March 1, 2025</span>
+                <span class="blog-tags">Web Dev, HTML, CSS, JavaScript</span>
+            </div>
+            <div class="decorative-line"></div>
+        </section>
+
+        <article class="blog-content" data-markdown="# Getting Back into Web Development
+
+After some time away from coding, I've decided to dive back into web development with this personal site project. I wanted to create something that reflects my personal aesthetic: a mix of late '90s nostalgia, Cartoon Network vibes, and inspiration from classic animation and films like Akira.
+
+## The Plan
+
+My goals for this project were:
+
+1. **Refresh my HTML/CSS/JS skills**
+2. **Create a unique visual style** that stands out from modern minimal designs
+3. **Build a platform for my work** that can showcase my projects, art, and thoughts
+4. **Have fun with animation and interaction**
+
+## Design Inspiration
+
+The design draws heavily from:
+
+* **'90s Cartoon Network websites** with their bold colors and quirky characters
+* **Akira's** distinctive visual style and color palette
+* **Grunge aesthetic** with textured backgrounds and imperfect elements
+* **Retro computing** with glitch effects and pixelated elements
+
+## Technical Implementation
+
+For this site, I'm using:
+
+* Vanilla **HTML/CSS/JavaScript** - no frameworks needed!
+* **CSS animations** for character movement and transitions
+* **SVG characters** that float around in the background
+* A custom **markdown parser** for blog posts
+* **GitHub Pages** for free and easy hosting
+
+```javascript
+// Example of the character animation code
+function animateCharacters() {
+  const characters = document.querySelectorAll('.character');
+  
+  characters.forEach(character => {
+    // Generate random positions within viewport
+    const randomX = Math.floor(Math.random() * window.innerWidth);
+    const randomY = Math.floor(Math.random() * window.innerHeight);
+    
+    // Set initial random positions
+    character.style.left = `${randomX}px`;
+    character.style.top = `${randomY}px`;
+  });
+}
+```
+
+## What's Next
+
+I plan to continue adding more features:
+
+* A **dark mode** toggle
+* More interactive **easter eggs**
+* **WebGL experiments** for some pages
+* A **contact form** with a fun twist
+
+Stay tuned for more updates as I continue to develop this site and share my creative journey!">
+            <!-- Content will be replaced by the markdown converter in script.js -->
+            <!-- This is a fallback if JavaScript is disabled -->
+            <h1>Getting Back into Web Development</h1>
+            <p>After some time away from coding, I've decided to dive back into web development with this personal site project...</p>
+        </article>
+
+        <div class="blog-navigation">
+            <a href="blog-post-2.html" class="prev-post">← Previous Post</a>
+            <a href="blog.html" class="back-to-blog">All Posts</a>
+            <a href="blog-post-3.html" class="next-post">Next Post →</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <p>&copy; 2025 David Gaspar-Herrera. Made with HTML, CSS & JS.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

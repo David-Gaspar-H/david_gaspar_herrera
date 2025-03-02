@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Art Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/art_styles.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <div id="header-container"></div>
+    
+    <main>
+        <h1>Art Gallery</h1>
+        <p>Welcome to my collection of artwork. Here you'll find a mix of digital illustrations, character designs, and experimental pieces inspired by my love for animation, Japanese aesthetics, and 90s nostalgia.</p>
+        
+        <div class="art-filter">
+            <button class="filter-btn active" data-filter="all">All Work</button>
+            <button class="filter-btn" data-filter="digital">Digital</button>
+            <button class="filter-btn" data-filter="traditional">Traditional</button>
+            <button class="filter-btn" data-filter="character">Character Design</button>
+            <button class="filter-btn" data-filter="experimental">Experimental</button>
+        </div>
+        
+        <div class="art-gallery">
+            <!-- Art items will be generated with JavaScript -->
+        </div>
+        
+        <div class="art-overlay">
+            <div class="overlay-content">
+                <img class="overlay-img" src="" alt="">
+                <div class="overlay-details">
+                    <h3 class="overlay-title"></h3>
+                    <p class="overlay-description"></p>
+                    <div class="overlay-meta">
+                        <span class="overlay-date"></span>
+                        <span class="overlay-category"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="close-overlay">×</div>
+            <div class="art-nav-buttons">
+                <button class="prev-button">←</button>
+                <button class="next-button">→</button>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-container"></div>
+    
+	<script src="js/templates.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/art_script.js"></script>
+</body>
+</html>

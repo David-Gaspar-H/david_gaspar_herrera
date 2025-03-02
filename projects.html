@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - David Gaspar-Herrera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Custom '90s font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-characters">
+        <!-- Characters will be added via JS -->
+        <div class="character character-1"></div>
+        <div class="character character-2"></div>
+    </div>
+
+    <div class="noise-overlay"></div>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo">David Gaspar-Herrera</div>
+        </div>
+        <nav>
+            <div class="nav-item"><a href="index.html">Home</a></div>
+            <div class="nav-item"><a href="blog.html">Blog</a></div>
+            <div class="nav-item"><a href="about.html">About</a></div>
+            <div class="nav-item"><a href="art.html">Art & Animation</a></div>
+            <div class="nav-item"><a href="projects.html">Projects</a></div>
+            <div class="nav-item"><a href="cv.html">CV</a></div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="intro">
+            <h1 class="glitch-text">Engineering Projects</h1>
+            <p>A showcase of my technical work and experiments</p>
+            <div class="decorative-line"></div>
+        </section>
+
+        <section class="project-filters">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="app">App Development</button>
+                <button class="filter-btn" data-filter="game">Game Dev</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+        </section>
+
+        <section class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img"></div>
+                <div class="project-details">
+                    <h2>Personal Website</h2>
+                    <p class="project-tags">HTML, CSS, JavaScript</p>
+                    <p class="project-description">A '90s-inspired personal website built with vanilla HTML, CSS, and JavaScript. Features include custom animations, a markdown blog system, and responsive design.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="app">
+                <div class="project-img"></div>
+                <div class="project-details">
+                    <h2>Task Manager App</h2>
+                    <p class="project-tags">React, Node.js, MongoDB</p>
+                    <p class="project-description">A full-stack task management application with user authentication, task categories, due dates, and notifications. Built with the MERN stack.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="game">
+                <div class="project-img"></div>
+                <div class="project-details">
+                    <h2>Retro Platformer Game</h2>
+                    <p class="project-tags">Phaser.js, JavaScript</p>
+                    <p class="project-description">A browser-based platformer game inspired by classic 16-bit era games. Features pixel art graphics, custom physics, and multiple levels.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Play Game</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card" data-category="other">
+                <div class="project-img"></div>
+                <div class="project-details">
+                    <h2>Weather Data Visualization</h2>
+                    <p class="project-tags">D3.js, JavaScript, APIs</p>
+                    <p class="project-description">An interactive visualization of historical weather data using D3.js. Users can explore temperature trends, precipitation patterns, and seasonal changes.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img"></div>
+                <div class="project-details">
+                    <h2>E-commerce Store Template</h2>
+                    <p class="project-tags">React, Redux, Firebase</p>
+                    <p class="project-description">A responsive e-commerce store template with product filtering, cart functionality, and user accounts. Built with React and Firebase.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card" data-category="app">
+                <div class="project-img"></div>
+                <div class="project-details">
+                    <h2>Recipe Finder App</h2>
+                    <p class="project-tags">React Native, API Integration</p>
+                    <p class="project-description">A mobile app that helps users find recipes based on ingredients they have. Features include saving favorites, meal planning, and shopping lists.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Case Study</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <p>&copy; 2025 David Gaspar-Herrera. Made with HTML, CSS & JS.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Project filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Show all items if "All" is selected
+                    if (filter === 'all') {
+                        projectCards.forEach(card => {
+                            card.style.display = 'grid';
+                        });
+                    } else {
+                        // Otherwise, filter items based on category
+                        projectCards.forEach(card => {
+                            if (card.getAttribute('data-category') === filter) {
+                                card.style.display = 'grid';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
