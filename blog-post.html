@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Interactive Web Experiences with 90s Aesthetics | David Gaspar-Herrera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog_styles.css">
+    <link rel="stylesheet" href="css/blog_post_styles.css">
+    <!-- Add syntax highlighting library for code blocks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+    
+    <main class="blog-post-container">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>Building Interactive Web Experiences with 90s Aesthetics</h1>
+                <div class="post-meta">
+                    <span class="post-date">January 15, 2025</span>
+                    <span class="post-category">Web Design</span>
+                    <span class="post-read-time">5 min read</span>
+                </div>
+                <div class="post-author">
+                    <img src="assets/images/profile.png" alt="David Gaspar-Herrera" class="author-avatar" >
+                    <span>By <strong>David Gaspar-Herrera</strong></span>
+                </div>
+            </header>
+            
+            <div class="post-featured-image">
+                <img src="assets/images/blog/featured-post.jpg" alt="90s web aesthetics" >
+            </div>
+            
+            <div class="post-content">
+                <p class="lead">The 90s web design aesthetic is making a strong comeback, but this time with the power of modern development techniques. In this article, I'll explore how you can blend nostalgic elements with contemporary code to create unique interactive experiences.</p>
+                
+                <h2>The Nostalgic Appeal of 90s Web Design</h2>
+                
+                <p>The 1990s were a formative period for the World Wide Web. Websites were experimental, colorful, and often unrestrained by the design conventions we follow today. From bright background colors to pixel art and unconventional layouts, the web of the 90s had a distinct personality that today's minimalist designs often lack.</p>
+                
+                <p>There's something charming about the early web's imperfections and creative freedom. Those of us who grew up with these experiences have a deep emotional connection to this era of the internet. This nostalgia factor is a powerful design tool when used intentionally.</p>
+                
+                <blockquote>
+                    "The constraints of early web technology forced designers to be creative in ways that we've forgotten in the age of powerful frameworks and high-bandwidth connections."
+                </blockquote>
+                
+                <h2>Key Elements of 90s Web Aesthetic</h2>
+                
+                <p>Before we dive into implementation, let's identify the defining characteristics of 90s web design:</p>
+                
+                <ul>
+                    <li><strong>Pixel Art and Low-Resolution Graphics</strong>: Limited by bandwidth and display capabilities</li>
+                    <li><strong>Bold Typography</strong>: Often using system fonts or early web fonts</li>
+                    <li><strong>Vibrant Colors</strong>: Bright, sometimes clashing color schemes</li>
+                    <li><strong>Grid Backgrounds</strong>: Simple patterns that didn't consume much bandwidth</li>
+                    <li><strong>Animated GIFs</strong>: From "Under Construction" signs to decorative elements</li>
+                    <li><strong>Visible Table-Based Layouts</strong>: Before CSS was widely adopted</li>
+                    <li><strong>Digital Stickers and Badges</strong>: Decorative elements often placed around content</li>
+                </ul>
+                
+                <h2>Modern Implementation Techniques</h2>
+                
+                <p>Here's where we blend old and new. The key is to evoke the feeling of 90s web design without sacrificing modern usability, performance, and accessibility.</p>
+                
+                <h3>1. Recreating Grid Backgrounds with CSS</h3>
+                
+                <p>Instead of using background images, we can create grid patterns using CSS gradients:</p>
+                
+                <pre><code class="language-css">body {
+    background-color: #f5f3e7;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}</code></pre>
+
+                <p>This creates a light grid pattern that's reminiscent of early web design while being completely customizable with CSS.</p>
+                
+                <h3>2. Custom Cursors for Interactive Elements</h3>
+                
+                <p>Custom cursors were popular in the 90s, but we can take this further with modern JavaScript:</p>
+                
+                <pre><code class="language-javascript">const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    
+    // Change cursor appearance when hovering over links
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+        cursor.style.transform = 'scale(2)';
+    } else {
+        cursor.style.transform = 'scale(1)';
+    }
+});</code></pre>
+
+                <p>This creates a custom cursor that follows the mouse and changes appearance when hovering over interactive elements.</p>
+                
+                <h3>3. CSS Animation for Retro Effects</h3>
+                
+                <p>Instead of using animated GIFs, we can create similar effects with CSS animations:</p>
+                
+                <pre><code class="language-css">@keyframes glitch {
+    0% {
+        clip: rect(31px, 9999px, 94px, 0);
+    }
+    10% {
+        clip: rect(70px, 9999px, 41px, 0);
+    }
+    /* ... more keyframes ... */
+    100% {
+        clip: rect(59px, 9999px, 98px, 0);
+    }
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch-text::before {
+    animation: glitch 0.4s infinite;
+    text-shadow: 2px 0 #ff00ff;
+}
+
+.glitch-text::after {
+    animation: glitch 0.5s infinite;
+    text-shadow: -2px 0 #00ffff;
+}</code></pre>
+
+                <p>This creates a "glitch" effect that mimics the digital artifacts common in early computing, but with the precision and performance of CSS animations.</p>
+                
+                <div class="image-with-caption">
+                    <img src="assets/images/blog/glitch-effect.jpg" alt="Glitch text effect example">
+                    <span class="caption">Example of a CSS glitch effect applied to text</span>
+                </div>
+                
+                <h2>Balancing Nostalgia with Usability</h2>
+                
+                <p>While recreating 90s aesthetics can be fun, it's important to remember that many aspects of early web design were limited by technical constraints rather than deliberate design choices. Here are some principles to follow:</p>
+                
+                <ol>
+                    <li><strong>Keep Core Functionality Accessible</strong>: Ensure that your site works without JavaScript and is navigable with keyboard controls</li>
+                    <li><strong>Maintain Readability</strong>: Choose fonts and color combinations that are easy to read</li>
+                    <li><strong>Be Responsive</strong>: Early websites weren't designed for multiple screen sizes, but yours should be</li>
+                    <li><strong>Limit Animation</strong>: Use animation purposefully rather than decoratively to avoid overwhelming users</li>
+                    <li><strong>Provide Controls</strong>: Allow users to disable intensive animations or effects if they prefer</li>
+                </ol>
+                
+                <h2>Practical Example: Creating a Retro Button Effect</h2>
+                
+                <p>Let's look at a practical example that combines several 90s-inspired techniques. Here's how to create a button with a retro "pressable" effect:</p>
+                
+                <pre><code class="language-html">&lt;button class="retro-button">Click Me&lt;/button></code></pre>
+                
+                <pre><code class="language-css">.retro-button {
+    background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
+    border: 3px solid #000000;
+    border-radius: 0;
+    box-shadow: 2px 2px 0 #000000;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.1s;
+}
+
+.retro-button:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+}
+
+.retro-button:active {
+    top: 2px;
+    left: 2px;
+    box-shadow: none;
+}</code></pre>
+
+                <p>This creates a button with a gradient background, thick border, and a shadow that disappears when clicked, creating the illusion of the button being physically pressed.</p>
+                
+                <h2>Conclusion</h2>
+                
+                <p>By combining the nostalgic aesthetic elements of 90s web design with modern development techniques, we can create websites that stand out while still providing excellent user experiences. The key is to understand what made early web design distinctive and translate those qualities into contemporary implementations.</p>
+                
+                <p>Remember that nostalgia is a powerful emotion, but it should enhance your design rather than detract from its usability. Use these techniques judiciously to create web experiences that are both visually interesting and functionally sound.</p>
+                
+                <p>What are your favorite aspects of 90s web design? Let me know in the comments below!</p>
+            </div>
+            
+            <footer class="post-footer">
+                <div class="post-tags">
+                    <span class="tags-title">Tags:</span>
+                    <a href="#" class="post-tag">Web Design</a>
+                    <a href="#" class="post-tag">CSS</a>
+                    <a href="#" class="post-tag">Retro</a>
+                    <a href="#" class="post-tag">Animation</a>
+                </div>
+                
+                <div class="post-share">
+                    <span class="share-title">Share:</span>
+                    <a href="#" class="share-button">Twitter</a>
+                    <a href="#" class="share-button">Facebook</a>
+                    <a href="#" class="share-button">LinkedIn</a>
+                </div>
+            </footer>
+        </article>
+        
+        <div class="post-comments">
+            <h3 class="comments-title">Comments</h3>
+            <div class="comment-form-container">
+                <form class="comment-form">
+                    <div class="form-group">
+                        <label for="comment-name">Name</label>
+                        <input type="text" id="comment-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-email">Email</label>
+                        <input type="email" id="comment-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-content">Comment</label>
+                        <textarea id="comment-content" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="comment-submit">Submit Comment</button>
+                </form>
+            </div>
+            
+            <div class="comments-list">
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="assets/images/avatars/avatar1.jpg" alt="User avatar" >
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">Sophia Chen</span>
+                            <span class="comment-date">January 15, 2025 • 10:42 AM</span>
+                        </div>
+                        <div class="comment-text">
+                            <p>Great article! I've been experimenting with these techniques in my own projects. The glitch effect is particularly interesting – I've been using it for error pages to add a bit of personality.</p>
+                        </div>
+                        <div class="comment-actions">
+                            <button class="comment-reply">Reply</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="assets/images/avatars/avatar2.jpg" alt="User avatar" >
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">Marcus Johnson</span>
+                            <span class="comment-date">January 15, 2025 • 2:18 PM</span>
+                        </div>
+                        <div class="comment-text">
+                            <p>I appreciate the focus on maintaining accessibility while implementing these retro designs. Too often I see developers sacrifice usability for aesthetics. Your example with the button is perfect – it looks nostalgic but still functions in a way modern users would expect.</p>
+                        </div>
+                        <div class="comment-actions">
+                            <button class="comment-reply">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <aside class="related-posts">
+            <h3 class="section-title">You Might Also Like</h3>
+            <div class="related-posts-grid">
+                <article class="related-post">
+                    <a href="#" class="related-post-link">
+                        <div class="related-post-image">
+                            <img src="assets/images/blog/post3.jpg" alt="Related post">
+                        </div>
+                        <h4>Docker Containers for Scalable Web Applications</h4>
+                    </a>
+                </article>
+                
+                <article class="related-post">
+                    <a href="#" class="related-post-link">
+                        <div class="related-post-image">
+                            <img src="assets/images/blog/post4.jpg" alt="Related post">
+                        </div>
+                        <h4>The Influence of Akira on Modern Animation and Design</h4>
+                    </a>
+                </article>
+                
+                <article class="related-post">
+                    <a href="#" class="related-post-link">
+                        <div class="related-post-image">
+                            <img src="assets/images/blog/post5.jpg" alt="Related post">
+                        </div>
+                        <h4>Creating Real-time Collaborative Web Applications</h4>
+                    </a>
+                </article>
+            </div>
+        </aside>
+        
+        <div class="sticker blog-post-sticker-1"><img src="assets/images/sticker11.png" alt="Decorative sticker"></div>
+        <div class="sticker blog-post-sticker-2"><img src="assets/images/sticker12.png" alt="Decorative sticker"></div>
+    </main>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <!-- Load components first, then other scripts -->
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+    <!-- Syntax highlighting library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            hljs.highlightAll();
+        });
+        document.addEventListener('templatesLoaded', () => {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

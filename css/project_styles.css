@@ -1,10 +1,5 @@
 /* Projects Page Styles */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 /* Blueprint Background */
 .blueprint-background {
     background-color: #102a43;
@@ -27,12 +22,12 @@
 .projects-header {
     margin-bottom: 40px;
     text-align: center;
-    color: var(--main-bg);
 }
 
 .projects-header h1 {
     text-align: center;
     margin: 0 auto 20px;
+    color: var(--main-bg);
 }
 
 .projects-intro {
@@ -335,8 +330,9 @@
 
 /* Blueprint Elements */
 .blueprint-line {
-    position: absolute;
+    position: fixed;
     background-color: rgba(52, 152, 219, 0.2);
+    z-index: -1;
 }
 
 .blueprint-line.horizontal {
@@ -350,9 +346,10 @@
 }
 
 .blueprint-circle {
-    position: absolute;
+    position: fixed;
     border: 1px solid rgba(52, 152, 219, 0.2);
     border-radius: 50%;
+    z-index: -1;
 }
 
 /* Responsive Styles */

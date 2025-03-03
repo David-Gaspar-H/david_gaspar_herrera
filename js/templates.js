@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <nav>
                     <ul>
                         <li><a href="index.html" id="nav-home">Home</a></li>
-                        <li><a href="art.html" id="nav-art">Art</a></li>
-                        <li><a href="projects.html" id="nav-projects">Projects</a></li>
-                        <li><a href="blog.html" id="nav-blog">Blog</a></li>
                         <li><a href="about.html" id="nav-about">About</a></li>
+                        <li><a href="projects.html" id="nav-projects">Projects</a></li>
+                        <li><a href="art.html" id="nav-art">Art</a></li>
+                        <li><a href="blog.html" id="nav-blog">Blog</a></li>
                         <li><a href="cv.html" id="nav-cv">CV</a></li>
                     </ul>
                 </nav>
