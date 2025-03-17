@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="footer-links">
                         <a href="https://github.com/David-Gaspar-H" target="_blank">GitHub</a>
-                        <a href="#">Contact</a>
+                        <a href="https://www.linkedin.com/in/ddg-h" target="_blank">LinkedIn</a>
+                        <a href="mailto:ddgh.null@gmail.com">ddgh.null@gmail.com</a>
                     </div>
                     <div class="copyright">
                         &copy; <span id="year">2025</span> David Gaspar-Herrera. All rights reserved.
