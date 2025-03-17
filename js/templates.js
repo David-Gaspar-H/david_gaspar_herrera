@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="index.html" id="nav-home">Home</a></li>
                         <li><a href="about.html" id="nav-about">About</a></li>
                         <li><a href="projects.html" id="nav-projects">Projects</a></li>
-                        <li><a href="art.html" id="nav-art">Art</a></li>
-                        <li><a href="blog.html" id="nav-blog">Blog</a></li>
                         <li><a href="cv.html" id="nav-cv">CV</a></li>
                     </ul>
                 </nav>
@@ -28,9 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span>Made with HTML, CSS & pure JS</span>
                     </div>
                     <div class="footer-links">
-                        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                        <a href="https://github.com/David-Gaspar-H" target="_blank">GitHub</a>
                         <a href="#">Contact</a>
-                        <a href="#">RSS</a>
                     </div>
                     <div class="copyright">
                         &copy; <span id="year">2025</span> David Gaspar-Herrera. All rights reserved.

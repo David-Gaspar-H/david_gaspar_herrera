@@ -4,67 +4,11 @@
 const artData = [
     {
         id: 1,
-        title: "Neo-Tokyo Dreams",
-        description: "A digital illustration inspired by the cyberpunk aesthetics of Akira, featuring a futuristic cityscape at night.",
-        image: "assets/images/art/art1.jpg", // Replace with your image paths
-        category: "digital",
-        date: "March 2024"
-    },
-    {
-        id: 2,
-        title: "Vintage Mecha",
+        title: "Mecha",
         description: "Character design for a retro-futuristic mecha robot with 90s anime influences.",
         image: "assets/images/art/art2.jpg",
         category: "character",
         date: "January 2024"
-    },
-    {
-        id: 3,
-        title: "Analog Sketch #42",
-        description: "A traditional pen and ink sketch exploring organic forms and mechanical elements.",
-        image: "assets/images/art/art3.jpg",
-        category: "traditional",
-        date: "December 2023"
-    },
-    {
-        id: 4,
-        title: "Glitch Study",
-        description: "An experimental piece exploring digital artifacts and corrupted imagery as aesthetic elements.",
-        image: "assets/images/art/art4.jpg",
-        category: "experimental",
-        date: "November 2023"
-    },
-    {
-        id: 5,
-        title: "Street Style",
-        description: "Character design featuring 90s-inspired street fashion with a modern twist.",
-        image: "assets/images/art/art5.jpg",
-        category: "character",
-        date: "October 2023"
-    },
-    {
-        id: 6,
-        title: "Watercolor Memories",
-        description: "A traditional watercolor painting exploring themes of nostalgia and faded memories.",
-        image: "assets/images/art/art6.jpg",
-        category: "traditional",
-        date: "September 2023"
-    },
-    {
-        id: 7,
-        title: "Digital Dystopia",
-        description: "A digital painting depicting a dystopian landscape influenced by classic anime and manga.",
-        image: "assets/images/art/art7.jpg",
-        category: "digital",
-        date: "August 2023"
-    },
-    {
-        id: 8,
-        title: "Signal Interference",
-        description: "An experimental piece exploring the aesthetics of analog TV static and signal disruption.",
-        image: "assets/images/art/art8.jpg",
-        category: "experimental",
-        date: "July 2023"
     }
 ];
 
